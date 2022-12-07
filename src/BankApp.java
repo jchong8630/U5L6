@@ -10,16 +10,15 @@ public class BankApp {
         this.card = card;
     }
 
-    public String bagelShopMenu(){
-        return "Bagel Menu:\n1. Make A Purchase\n2. Return An Item\n3. Open Second Card\n4. Exit";
+    public String bankAppMenu(){
+        return "Bank App Menu:\n1. Make A Purchase\n2. Return An Item\n3. Open Second Card\n4. Check Bagel Inventory\n5. Deposit Profits\n6. Compare Credit Card Balances";
     }
     public void newCard(CreditCard card){
         card2 = card;
     }
     public String purchase(int quantity, String pin, int choice){
         if (choice == 1) {
-            if (card.checkPIN(pin)) {
-                bagel.payForBagels(card, quantity, pin);
+            if (bagel.payForBagels(card, quantity, pin)) {
                 return "Payment Successful";
             }
         }
@@ -39,6 +38,21 @@ public class BankApp {
         return "Return Failed";
     }
 
+    public BagelShop checkInventory(){
+       return bagel;
+    }
+
+    public String depositProfits(){
+        bagel.depositProfits();
+        return "Deposit Successful";
+    }
+
+    public CreditCard printCard1(){
+        return card;
+    }
+    public CreditCard printCard2(){
+        return card2;
+    }
 
 
 }

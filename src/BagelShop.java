@@ -90,6 +90,10 @@ public class BagelShop
         profit = 0;
     }
 
+    public void changeBank(Bank bank){
+        vendorBank = bank;
+    }
+
     public String toString()
     {
         String str = "Vendor: " + name;

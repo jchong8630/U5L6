@@ -67,7 +67,7 @@ public class Bank
 
     public String toString()
     {
-        String str = "Bank";
+        String str = "\nBank";
         str += "\nOn Hand Cash: " + onHandCash;
         str += "\nVendor Account Balance: " + vendorAccountBalance;
         return str;
