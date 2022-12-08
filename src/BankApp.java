@@ -19,23 +19,23 @@ public class BankApp {
     public String purchase(int quantity, String pin, int choice){
         if (choice == 1) {
             if (bagel.payForBagels(card, quantity, pin)) {
-                return "Payment Successful";
+                return "\nPayment Successful";
             }
         }
         else if (choice == 2){
             if (card2.checkPIN(pin)){
                 bagel.payForBagels(card2, quantity, pin);
-                return "Payment Successful";
+                return "\nPayment Successful";
             }
         }
-        return "Payment Failed";
+        return "\nPayment Failed";
     }
     public String returnItem(int quantity, String pin){
         if (card.checkPIN(pin)){
             bagel.returnBagels(card, quantity, pin);
-            return "Return Successful";
+            return "\nReturn Successful";
         }
-        return "Return Failed";
+        return "\nReturn Failed";
     }
 
     public BagelShop checkInventory(){
@@ -44,7 +44,7 @@ public class BankApp {
 
     public String depositProfits(){
         bagel.depositProfits();
-        return "Deposit Successful";
+        return "\nDeposit Successful";
     }
 
     public CreditCard printCard1(){

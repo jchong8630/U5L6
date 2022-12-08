@@ -1,8 +1,6 @@
 import java.util.Scanner;
-public class Main
-{
-    public static void main(String[] args)
-    {
+public class Main {
+    public static void main(String[] args) {
         int count = 0;
         int choice = 1;
         String c = "";
@@ -47,10 +45,13 @@ public class Main
                 count += 1;
                 int cardCount = 2;
             }
+            if (c.equals("3") && (count != 0)) {
+                System.out.println("\nYou Have Already Opened A Second Card");
+            }
             if (c.equals("4")) {
                 System.out.println("\n" + app.checkInventory());
             }
-            if (c.equals("5")){
+            if (c.equals("5")) {
 //                if (count > 1){
 //                    System.out.println("Which account would you like to deposit to (1 or 2): ");
 //                    int b = s.nextInt();
@@ -60,9 +61,11 @@ public class Main
                 System.out.println(app.depositProfits());
                 System.out.println(bank);
             }
-            if (c.equals("6")){
+            if (c.equals("6")) {
                 System.out.println("\n" + app.printCard1());
-                System.out.println("\n" + app.printCard2());
+                if (app.printCard2() != null) {
+                    System.out.println("\n" + app.printCard2());
+                }
             }
 
         }
