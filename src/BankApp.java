@@ -11,7 +11,7 @@ public class BankApp {
     }
 
     public String bankAppMenu(){
-        return "Bank App Menu:\n1. Make A Purchase\n2. Return An Item\n3. Open Second Card\n4. Check Bagel Inventory\n5. Deposit Profits\n6. Compare Credit Card Balances";
+        return "Bank App Menu:\n1. Make A Purchase\n2. Return An Item\n3. Open Second Card\n4. Check Bagel Inventory\n5. Deposit Profits\n6. Compare Credit Card Balances\n7. Quit";
     }
     public void newCard(CreditCard card){
         card2 = card;
